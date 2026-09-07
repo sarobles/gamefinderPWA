@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1900" viewBox="0 0 1200 1900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+    <marker id="arrowD" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Fondo -->
+  <rect x="0" y="0" width="1200" height="1900" fill="#ffffff"/>
+
+  <!-- Encabezado -->
+  <text x="600" y="72" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#111" text-anchor="middle">GameFinder PWA — Mapa de navegación</text>
+  <text x="600" y="116" font-family="Arial, sans-serif" font-size="22" fill="#555" text-anchor="middle">Boceto wireframe · Patrón: Pestañas (Catálogo · Mapa · Perfil) + Pila (Detalle) · Mobile-first</text>
+
+  <!-- ============ PANTALLA 1: Onboarding ============ -->
+  <g>
+    <rect x="450" y="160" width="300" height="500" rx="22" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+    <rect x="450" y="160" width="300" height="500" rx="22" fill="none" stroke="#222" stroke-width="2.5"/>
+    <text x="600" y="205" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#111" text-anchor="middle">Preferencias</text>
+    <text x="600" y="232" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">Onboarding (1/3)</text>
+    <rect x="470" y="262" width="84" height="36" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="1.5"/>
+    <text x="512" y="285" font-family="Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle">Género</text>
+    <rect x="562" y="262" width="84" height="36" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="1.5"/>
+    <text x="604" y="285" font-family="Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle">Edad</text>
+    <rect x="656" y="262" width="84" height="36" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="1.5"/>
+    <text x="698" y="285" font-family="Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle">Tema</text>
+    <rect x="480" y="330" width="240" height="34" rx="8" fill="#fafafa" stroke="#aaa" stroke-width="1.2"/>
+    <text x="500" y="352" font-family="Arial, sans-serif" font-size="13" fill="#aaa">Plataforma</text>
+    <rect x="510" y="420" width="180" height="46" rx="12" fill="#111" stroke="#111" stroke-width="1.5"/>
+    <text x="600" y="449" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Comenzar</text>
+  </g>
+  <text x="600" y="684" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">1 · Preferencias (onboarding)</text>
+
+  <!-- Flecha Onboarding -> Catálogo -->
+  <line x1="600" y1="662" x2="300" y2="722" stroke="#222" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="445" y="685" font-family="Arial, sans-serif" font-size="14" fill="#333">Comenzar</text>
+
+  <!-- ============ PANTALLA 2: Catálogo ============ -->
+  <g>
+    <rect x="120" y="732" width="300" height="500" rx="22" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+    <text x="140" y="762" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#111">Catálogo</text>
+    <rect x="140" y="782" width="260" height="34" rx="10" fill="#f2f2f2" stroke="#222" stroke-width="1.5"/>
+    <text x="158" y="805" font-family="Arial, sans-serif" font-size="13" fill="#888">Buscar juegos…</text>
+    <rect x="140" y="826" width="80" height="26" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="1.2"/>
+    <text x="180" y="844" font-family="Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle">Filtros ▾</text>
+    <!-- grid 3x2 -->
+    <rect x="140" y="866" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="146" y="874" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="146" y="938" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="146" y="952" width="40" height="8" rx="2" fill="#bbb"/>
+    <rect x="229" y="866" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="235" y="874" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="235" y="938" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="235" y="952" width="40" height="8" rx="2" fill="#bbb"/>
+    <rect x="318" y="866" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="324" y="874" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="324" y="938" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="324" y="952" width="40" height="8" rx="2" fill="#bbb"/>
+    <rect x="140" y="978" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="146" y="986" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="146" y="1050" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="146" y="1064" width="40" height="8" rx="2" fill="#bbb"/>
+    <rect x="229" y="978" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="235" y="986" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="235" y="1050" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="235" y="1064" width="40" height="8" rx="2" fill="#bbb"/>
+    <rect x="318" y="978" width="82" height="104" rx="6" fill="#fafafa" stroke="#222" stroke-width="1.2"/>
+    <rect x="324" y="986" width="70" height="56" rx="4" fill="#ddd"/>
+    <rect x="324" y="1050" width="60" height="8" rx="2" fill="#bbb"/>
+    <rect x="324" y="1064" width="40" height="8" rx="2" fill="#bbb"/>
+    <!-- tab bar -->
+    <rect x="130" y="1180" width="280" height="42" rx="10" fill="#f2f2f2" stroke="#222" stroke-width="1.5"/>
+    <circle cx="185" cy="1201" r="7" fill="#111"/>
+    <text x="185" y="1222" font-family="Arial, sans-serif" font-size="10" fill="#111" text-anchor="middle">Catálogo</text>
+    <circle cx="270" cy="1201" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+    <text x="270" y="1222" font-family="Arial, sans-serif" font-size="10" fill="#111" text-anchor="middle">Mapa</text>
+    <circle cx="355" cy="1201" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+    <text x="355" y="1222" font-family="Arial, sans-serif" font-size="10" fill="#111" text-anchor="middle">Perfil</text>
+  </g>
+  <text x="270" y="1256" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">2 · Catálogo (Home) — Tab 1</text>
+
+  <!-- Flecha Catálogo -> Detalle -->
+  <line x1="422" y1="880" x2="776" y2="880" stroke="#222" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="600" y="868" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">tap tarjeta</text>
+
+  <!-- ============ PANTALLA 3: Detalle ============ -->
+  <g>
+    <rect x="780" y="732" width="300" height="500" rx="22" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+    <rect x="800" y="760" width="260" height="150" rx="8" fill="#ddd" stroke="#222" stroke-width="1.5"/>
+    <text x="930" y="838" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">Portada / Screenshots</text>
+    <text x="800" y="946" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#111">Título del juego</text>
+    <text x="800" y="972" font-family="Arial, sans-serif" font-size="14" fill="#555">★★★★ 4.8 · Acción · PC</text>
+    <text x="800" y="998" font-family="Arial, sans-serif" font-size="12" fill="#888">Publisher · Developer · 2026</text>
+    <rect x="800" y="1030" width="220" height="42" rx="10" fill="#111"/>
+    <text x="910" y="1057" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Ver en tienda</text>
+    <circle cx="1048" cy="1051" r="14" fill="none" stroke="#222" stroke-width="2"/>
+    <rect x="800" y="1084" width="220" height="38" rx="10" fill="#fafafa" stroke="#222" stroke-width="1.5"/>
+    <text x="910" y="1109" font-family="Arial, sans-serif" font-size="14" fill="#111" text-anchor="middle">❤ Guardar</text>
+    <text x="800" y="1156" font-family="Arial, sans-serif" font-size="13" fill="#444">📍 Tiendas y eventos cerca</text>
+  </g>
+  <text x="930" y="1256" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">3 · Detalle de juego (pila)</text>
+
+  <!-- Flecha Catálogo -> Mapa -->
+  <line x1="270" y1="1234" x2="270" y2="1286" stroke="#222" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="282" y="1268" font-family="Arial, sans-serif" font-size="13" fill="#333">Ver cerca</text>
+
+  <!-- Flecha Detalle -> Perfil -->
+  <line x1="930" y1="1234" x2="930" y2="1286" stroke="#222" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="910" y="1268" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="end">Tab Perfil</text>
+
+  <!-- ============ PANTALLA 4: Mapa ============ -->
+  <g>
+    <rect x="120" y="1296" width="300" height="500" rx="22" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+    <text x="140" y="1326" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#111">Mapa y eventos</text>
+    <rect x="140" y="1344" width="260" height="190" rx="6" fill="#eef2f5" stroke="#222" stroke-width="1.5"/>
+    <circle cx="240" cy="1440" r="12" fill="none" stroke="#222" stroke-width="2.5"/>
+    <text x="240" y="1450" font-family="Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle">▼</text>
+    <text x="240" y="1435" font-family="Arial, sans-serif" font-size="9" fill="#111" text-anchor="middle">Usted</text>
+    <circle cx="310" cy="1410" r="7" fill="#222"/>
+    <text x="325" y="1415" font-family="Arial, sans-serif" font-size="10" fill="#333">Tienda</text>
+    <circle cx="190" cy="1470" r="7" fill="#222"/>
+    <text x="205" y="1475" font-family="Arial, sans-serif" font-size="10" fill="#333">Evento</text>
+    <rect x="150" y="1560" width="240" height="42" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="166" y="1578" font-family="Arial, sans-serif" font-size="13" fill="#111">Tienda Games · 300 m</text>
+    <text x="166" y="1594" font-family="Arial, sans-serif" font-size="11" fill="#888">Abierta ahora</text>
+    <rect x="150" y="1610" width="240" height="42" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="166" y="1628" font-family="Arial, sans-serif" font-size="13" fill="#111">Torneo FreeGames · 1.2 km</text>
+    <text x="166" y="1644" font-family="Arial, sans-serif" font-size="11" fill="#888">Sábado 20:00 · GPS</text>
+  </g>
+  <text x="270" y="1820" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">4 · Mapa y eventos — Tab 2</text>
+
+  <!-- ============ PANTALLA 5: Perfil ============ -->
+  <g>
+    <rect x="780" y="1296" width="300" height="500" rx="22" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+    <circle cx="930" cy="1358" r="34" fill="#ddd" stroke="#222" stroke-width="1.5"/>
+    <text x="930" y="1365" font-family="Arial, sans-serif" font-size="22" fill="#999" text-anchor="middle">S</text>
+    <text x="930" y="1412" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#111" text-anchor="middle">Stiven Robles</text>
+    <rect x="806" y="1438" width="248" height="40" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="822" y="1463" font-family="Arial, sans-serif" font-size="14" fill="#111">❤ Guardados / historial</text>
+    <rect x="806" y="1486" width="248" height="40" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="822" y="1511" font-family="Arial, sans-serif" font-size="14" fill="#111">⚙ Preferencias</text>
+    <rect x="806" y="1534" width="248" height="40" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="822" y="1559" font-family="Arial, sans-serif" font-size="14" fill="#111">🔔 Notificaciones</text>
+    <rect x="806" y="1582" width="248" height="40" rx="6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="822" y="1607" font-family="Arial, sans-serif" font-size="14" fill="#111">ℹ Acerca de</text>
+    <text x="930" y="1678" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Tema claro/oscuro · Privacidad</text>
+    <text x="930" y="1720" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">© 2026 GameFinder ·</text>
+    <text x="930" y="1738" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Stiven Robles Galán</text>
+  </g>
+  <text x="930" y="1820" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">5 · Perfil y alertas — Tab 3</text>
+
+  <!-- ============ Flecha curva Detalle -> Mapa (tiendas cerca) ============ -->
+  <path d="M 780 1050 C 700 1170, 500 1180, 424 1200" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#arrowD)"/>
+  <text x="635" y="1165" font-family="Arial, sans-serif" font-size="12" fill="#666">tiendas cerca (GPS)</text>
+
+  <!-- ============ Pie ============ -->
+  <line x1="220" y1="1852" x2="980" y2="1852" stroke="#ccc" stroke-width="1.5"/>
+  <text x="600" y="1882" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">© 2026 GameFinder · Stiven Robles Galán — Boceto v2 · Arquitectura de pantallas (Tab + Stack)</text>
+</svg>
