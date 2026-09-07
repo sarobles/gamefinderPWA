@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c3aed">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<title>GameFinder - Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24 font-body-md">
+<!-- Offline Banner -->
+<div class="w-full bg-error-container text-on-error-container text-label-sm font-label-sm py-2 px-margin-mobile flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">wifi_off</span>
+<span>You are offline. Showing cached results.</span>
+</div>
+<!-- TopAppBar Mobile -->
+<header class="sticky top-0 z-40 bg-background dark:bg-background px-margin-mobile h-16 flex justify-between items-center w-full flat no shadows">
+<div class="flex items-center gap-2 text-primary dark:text-primary hover:bg-surface-variant/50 transition-colors Active: scale-95 duration-100 rounded-lg p-1 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary">
+            GameFinder
+        </div>
+<div class="w-8"></div> <!-- Spacer for alignment -->
+</header>
+
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col gap-xl">
+<!-- Search and Filters Section -->
+<section class="flex flex-col gap-md">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container text-on-surface text-body-md font-body-md placeholder:text-outline border border-outline-variant/30 rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search games..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-sm overflow-x-auto pb-2 scrollbar-hide -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<button class="flex-shrink-0 bg-primary-container text-on-primary-container text-label-sm font-label-sm px-4 py-2 rounded-full font-bold transition-colors shadow-[0px_4px_10px_-2px_rgba(124,58,237,0.3)]">
+                    All Games
+                </button>
+<button class="flex-shrink-0 bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-4 py-2 rounded-full border border-outline-variant/30 hover:bg-surface-variant/50 transition-colors">
+                    Action RPG
+                </button>
+<button class="flex-shrink-0 bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-4 py-2 rounded-full border border-outline-variant/30 hover:bg-surface-variant/50 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span> PC
+                </button>
+<button class="flex-shrink-0 bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-4 py-2 rounded-full border border-outline-variant/30 hover:bg-surface-variant/50 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sports_esports</span> Console
+                </button>
+<button class="flex-shrink-0 bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-4 py-2 rounded-full border border-outline-variant/30 hover:bg-surface-variant/50 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sort</span> Top Rated
+                </button>
+</div>
+</section>
+<!-- Bento Grid Layout for Games -->
+<section class="grid grid-cols-2 gap-gutter md:gap-lg">
+<!-- Featured Game (Spans 2 columns) -->
+<div class="col-span-2 row-span-2 group cursor-pointer rounded-[16px] overflow-hidden bg-surface-container relative border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)]" onclick="window.location.href='pages/detalle-juego.html'">
+<div class="bg-cover bg-center w-full h-full min-h-[300px] md:min-h-[400px] relative" data-alt="A breathtaking, cinematic key art image of a dark fantasy action RPG. The scene shows a lone heavily armored knight standing on a misty cliff edge, looking out at a glowing, foreboding gothic castle in the distance. The lighting is dramatic, with deep purples, intense glowing neon accents, and heavy shadows. The style is hyper-realistic, highly detailed, and modern gaming aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD35jQuFF7IqzQrcY6g23aViPq_2sL2yuQ56ColfbA7dprgEMyeC-Nef6wwYw3STQEl2i7BqNq3swb450dg5Vlm5x_QZin5j9pw9LXsD5vBHD5aC06QEma2C281mXw9Y7FFcSPtewnKaJFRMiCO1e9CzbXxYmVmpq54EXd9D-NK_VhxKK92JwgjusxJrdQ4NyaS55gXqkgxh2ceeHG3jFp3cslW9v-i07-tQKjlHoebhWw5qLsb3CYufg')">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 flex flex-col gap-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Featured</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm ml-1">4.9</span>
+</div>
+</div>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface font-bold drop-shadow-md">Elden Ring: Shadow of the Erdtree</h2>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm font-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">desktop_windows</span> PC, PS5, Xbox</span>
+<span class="text-outline text-xs">•</span>
+<span>Action RPG</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Game Card 1 -->
+<div class="col-span-1 group cursor-pointer bg-surface-container rounded-[16px] overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)] flex flex-col" onclick="window.location.href='pages/detalle-juego.html'">
+<div class="aspect-[3/4] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover art for a futuristic cyberpunk racing game. Bright neon pink and cyan vehicles speed through a rain-slicked, futuristic Tokyo-inspired city at night. The image is dynamic, full of motion blur and intense glowing lights against a dark, moody background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg8TNW1yCGuJHHYaUw-b-1Hfb5jvB7Xtij3j0iHveZzYsTHFVct4HAFJLvDY7wmrPNnT3P8eV3knLNL3d-CyCqu14gRh__dKJE2qQuSjd6vhl--jdZ7FQsVe8xWcMNwNGtZJ6ZCCE0QJPm6ONwqPdm4lWw2DhKYrR3vUYv0oT4r69xEPMGy93r83LVjqiqmh28ftM-VfEwZQevBvmQnR8uEEwZ1lk5yl-bJAoGdMCvjonTwq_Tm1DLqw"/>
+<div class="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface">favorite</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1 bg-surface-container flex-grow">
+<h3 class="text-body-md font-body-md font-semibold text-on-surface truncate">Neon Velocity</h3>
+<div class="flex justify-between items-center mt-auto pt-2">
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm ml-1">4.5</span>
+</div>
+<div class="flex gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">sports_esports</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Game Card 2 -->
+<div class="col-span-1 group cursor-pointer bg-surface-container rounded-[16px] overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)] flex flex-col" onclick="window.location.href='pages/detalle-juego.html'">
+<div class="aspect-[3/4] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover art for a cozy, stylized farming simulator. A beautiful, vibrant green farm landscape at sunrise. Cute, chunky animals graze near a red barn. The art style is soft, bright, slightly low-poly, and very welcoming. The lighting is warm and golden, contrasting with deep, soothing green tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8LqcRmZtIH0Dj-m037X4-1qipcjiBhBoaLCLSGC6EcRuO9gMpsQ-XkjvBvdoJO9P0iIFXaLbeIRX_Y256u7StAl7YxmeUEqW2VBlZwUE1t2KAl1pYZwjF_U5Qs5feuui0C6RqF6sA8XvvV9_0bCv6LW6e9cQea3jtE95hox-N6exkSqNxuVzvr64yGIcxkR8qQefdhNKqIPTFbBazsbOUbq3tfqFNJh8rCqZM2g6W2ss-vUDLOaJ8Xg"/>
+<div class="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-1 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1 bg-surface-container flex-grow">
+<h3 class="text-body-md font-body-md font-semibold text-on-surface truncate">Stardrop Valley</h3>
+<div class="flex justify-between items-center mt-auto pt-2">
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm ml-1">4.8</span>
+</div>
+<div class="flex gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+<span class="material-symbols-outlined text-[16px]">smartphone</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Game Card 3 -->
+<div class="col-span-1 group cursor-pointer bg-surface-container rounded-[16px] overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)] flex flex-col" onclick="window.location.href='pages/detalle-juego.html'">
+<div class="aspect-[3/4] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover art for a gritty sci-fi first-person shooter. A space marine in heavy, scratched mechanical armor stands amidst the ruins of a metallic space station. Sparks fly in the background. The lighting is cold, with harsh blues and stark whites. The mood is intense, action-packed, and high-fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Lwh56QLxm4whVv2iGkQqxHc3uhq2hSMW9Y0y7aze8yly8Y34M1-ajj539DXU09fQOhL8u2I618MRvDC_1OxzAd9c517A_Qsz7JJPhSYRVBYWHudIhesugZ9C3xhNUcoHb3Cxa70LTewMnSQcLc69y4ZKHuz-5WXaKjQ3s-8_9UJY8GrlzlHpshCEUQcKPNpLqpJhoKeO8J7MLiCpaiGwo7ijEG5SssT2cAD-Vt61hL7IpGheYHk2cQ"/>
+</div>
+<div class="p-4 flex flex-col gap-1 bg-surface-container flex-grow">
+<h3 class="text-body-md font-body-md font-semibold text-on-surface truncate">Void Vanguard</h3>
+<div class="flex justify-between items-center mt-auto pt-2">
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm ml-1">4.2</span>
+</div>
+<div class="flex gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+<span class="material-symbols-outlined text-[16px]">sports_esports</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Skeleton Loading Cards -->
+<div class="col-span-1 bg-surface-container rounded-[16px] overflow-hidden border border-outline-variant/10 flex flex-col">
+<div class="aspect-[3/4] skeleton-shimmer w-full h-full"></div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container">
+<div class="h-4 skeleton-shimmer rounded w-3/4"></div>
+<div class="flex justify-between items-center mt-2">
+<div class="h-3 skeleton-shimmer rounded w-8"></div>
+<div class="h-4 skeleton-shimmer rounded w-12"></div>
+</div>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container rounded-[16px] overflow-hidden border border-outline-variant/10 flex flex-col">
+<div class="aspect-[3/4] skeleton-shimmer w-full h-full"></div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container">
+<div class="h-4 skeleton-shimmer rounded w-5/6"></div>
+<div class="flex justify-between items-center mt-2">
+<div class="h-3 skeleton-shimmer rounded w-8"></div>
+<div class="h-4 skeleton-shimmer rounded w-12"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Load More Button -->
+<div class="flex justify-center mt-lg">
+<button class="bg-transparent border border-outline-variant/50 text-on-surface text-body-sm font-body-sm px-6 py-3 rounded-full hover:bg-surface-variant/30 hover:border-primary transition-all duration-300">
+                Load More Games
+            </button>
+</div>
+</main>
+<!-- BottomNavBar Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-background/80 dark:bg-background/80 backdrop-blur-md shadow-lg border-t border-outline-variant/30">
+<a class="flex flex-col items-center justify-center text-primary font-bold hover:text-primary/80 transition-colors Active: scale-90 duration-150 w-1/3" href="index.html">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-label-sm font-label-sm mt-1">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-colors w-1/3" href="pages/mapa.html">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<span class="text-label-sm font-label-sm mt-1">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-colors w-1/3" href="pages/perfil.html">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-label-sm font-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<script src="js/pwa-register.js" defer></script>
+</body></html>

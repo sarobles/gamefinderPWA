@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7c3aed">
+<link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+<title>GameFinder - Mapa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface antialiased h-screen w-screen overflow-hidden flex flex-col font-body-md text-body-md">
+<main class="relative flex-grow w-full h-full">
+<!-- Map Background -->
+<div class="absolute inset-0 w-full h-full bg-surface-container" data-alt="A high-altitude, stylized digital map view of a modern metropolitan area resembling a futuristic Tokyo or Seoul at night. The map is rendered in a sleek dark mode aesthetic with a base of deep navy blues (#0F172A) and rich slate (#1E293B). Streets and highways glow faintly with muted cyan and subtle violet accents, creating a highly technical, cyberpunk-lite visual style. No text or labels are present. The lighting is moody and ambient, with soft gradients indicating varying elevations or dense urban districts. It feels like an interface from a high-end gaming discovery platform." data-location="Tokyo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4pbuA-xD0WlOmA83sfFW5_cc1t3QN6PkQn-aGCNgLP36vfb6f13qO1eieGH8jm-s-sz3cbcvBgcWPs9H5mwWLAlqncNHD0cd7NT2CSdKE9zBcs2dmu4kz6aCxUQc9mQ_rpH-OZ6QxRXT2ZpBHQPd_2RAiHeRfzwpdpHGZuioMtGMhB6aqG6OGGpEfRs5W0YiVu-PDJsZzTL2D_5e_iaqUEPccEH9_2zAd5-OeEzsLPWKMozDrlzwnNQ')">
+<!-- Map Markers Container -->
+<div class="absolute inset-0 z-10">
+<!-- User Location Marker -->
+<div class="absolute top-[45%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center map-marker">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/50">
+<span class="material-symbols-outlined text-background text-[14px]" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</div>
+</div>
+</div>
+<!-- Store Marker 1 -->
+<div class="absolute top-[30%] left-[65%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-surface border-2 border-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-[16px]">storefront</span>
+</div>
+<div class="absolute top-full mt-1 left-1/2 transform -translate-x-1/2 bg-surface-container-high px-2 py-1 rounded text-label-sm font-label-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                        Neo Tokyo Arcade
+                    </div>
+</div>
+<!-- Event Marker 1 -->
+<div class="absolute top-[60%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-secondary text-[16px]">emoji_events</span>
+</div>
+<div class="absolute top-full mt-1 left-1/2 transform -translate-x-1/2 bg-surface-container-high px-2 py-1 rounded text-label-sm font-label-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                        Smash Bros Local
+                    </div>
+</div>
+</div>
+<!-- Search / Filter Bar (Floating on top of map) -->
+<div class="absolute top-margin-mobile left-margin-mobile right-margin-mobile z-20">
+<div class="glass rounded-xl flex items-center px-4 py-3 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-on-surface-variant mr-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant w-full" placeholder="Buscar torneos, tiendas..." type="text"/>
+<button class="ml-2 bg-surface-variant/50 p-2 rounded-lg hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">tune</span>
+</button>
+</div>
+<!-- Quick Filters -->
+<div class="flex gap-sm mt-sm overflow-x-auto no-scrollbar py-1">
+<button class="bg-primary-container text-on-primary-container border border-primary-container px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap flex items-center gap-xs shadow-md">
+<span class="material-symbols-outlined text-[16px]">apps</span> Todos
+                    </button>
+<button class="bg-surface text-on-surface border border-outline-variant px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap flex items-center gap-xs shadow-md">
+<span class="material-symbols-outlined text-[16px]">storefront</span> Tiendas
+                    </button>
+<button class="bg-surface text-on-surface border border-outline-variant px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap flex items-center gap-xs shadow-md">
+<span class="material-symbols-outlined text-[16px]">emoji_events</span> Eventos
+                    </button>
+</div>
+</div>
+</div>
+<!-- Location Disabled State (Hidden by default, shown for prompt requirement) -->
+<!-- Toggle this with a JS class if needed, keeping it visually distinct as an overlay if GPS is off -->
+<div class="absolute inset-0 bg-background/90 backdrop-blur-sm z-30 flex flex-col items-center justify-center p-margin-mobile hidden" id="location-disabled-overlay">
+<div class="bg-surface-container-high rounded-2xl p-xl max-w-sm w-full text-center border border-outline-variant/30 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)]">
+<div class="w-16 h-16 bg-surface-variant rounded-full flex items-center justify-center mx-auto mb-lg">
+<span class="material-symbols-outlined text-primary text-[32px]">location_off</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-sm">Habilitar ubicación</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xl">
+                    Necesitamos acceso a tu ubicación para mostrarte las tiendas y eventos de gaming más cercanos a ti.
+                </p>
+<button class="w-full bg-primary-container text-on-primary-container font-body-sm text-body-sm font-bold py-3 px-lg rounded-lg hover:opacity-90 transition-opacity" onclick="document.getElementById('location-disabled-overlay').classList.add('hidden')">
+                    Activar GPS
+                </button>
+</div>
+</div>
+<!-- Bottom Sheet for Results -->
+<div class="absolute bottom-16 left-0 w-full glass rounded-t-3xl z-30 bottom-sheet flex flex-col shadow-[0px_-10px_25px_-5px_rgba(0,0,0,0.5)] border-t border-outline-variant/30 h-[70vh]" id="bottom-sheet">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center py-3 cursor-pointer" onclick="toggleBottomSheet()">
+<div class="w-12 h-1.5 bg-outline-variant/50 rounded-full"></div>
+</div>
+<div class="px-margin-mobile pb-sm flex justify-between items-end">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cerca de ti</h3>
+<span class="font-label-sm text-label-sm text-primary">12 resultados</span>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-grow overflow-y-auto px-margin-mobile pb-24 md:pb-xl space-y-md no-scrollbar">
+<!-- Result Card: Store -->
+<div class="bg-surface rounded-xl p-md border border-outline-variant/30 flex gap-md hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-16 h-16 rounded-lg bg-surface-variant flex-shrink-0 flex items-center justify-center border border-outline-variant overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A small square thumbnail image showing a vibrant, neon-lit storefront of a modern gaming and esports lounge at night. The sign reads 'Neo Tokyo Arcade' in stylized digital font. Vivid purples and blues dominate the lighting, reflecting off wet pavement. Cinematic lighting, highly detailed." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyyZ976veUaIk8N03PWzLgdj7w3nq4ZUvC2sU_qWp2nmy72skMjx7316Tq_Y9OqNQ3ZSMH6Pskg7XBI_c92gW5rIWyCUjpMnEbP4SqwB3Z5LtzChQXqXCn_KZnXfiVrETYshe6ZXajHMtqF68zgyO92gnT8vKKxDI6NEDd0i4Ajbplo-V_F0UiOT0Fg_QATCdfvoBGi8KYiSUPrvfa2lTQUgwOP3Kpt-PLLbNCdasDHxUIzBHBuGKAgQ')"></div>
+</div>
+<div class="flex flex-col justify-center w-full">
+<div class="flex justify-between items-start">
+<h4 class="font-body-md text-body-md font-bold leading-tight">Neo Tokyo Arcade</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center"><span class="material-symbols-outlined text-[12px] mr-xs">near_me</span>1.2km</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-xs">Tienda &amp; Lounge</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-xs text-primary">schedule</span> Abierto hasta 23:00
+                        </p>
+</div>
+</div>
+<!-- EventCard -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)] border border-outline-variant/50 group cursor-pointer h-40">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A dynamic, wide-aspect promotional image for a competitive gaming event. The scene features a sleek, dimly lit esports arena with vibrant magenta and cyan spotlights piercing through a light haze. In the foreground, silhouettes of intense competitors are seated at high-end PC setups, while a massive screen in the background displays abstract, energetic digital graphics. The mood is high-stakes and electrifying, adhering to a premium dark-mode aesthetic with deep #0F172A shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNsy7AcW44uTnWa5Trd7E3k_3OvLkjCFAHqFHM0yibAU9AgIrMr-WKnGv7xoGnTTbektfDcatG5D0G0afEUVrjE3zgOA5Sx_RXe_pHS9YlUR67jL4_sZ1gzlTIzoeKSvS-5BoQOt8JRoyV6yXynOJ6hxMaA6vPT-6x1LX09WVGMShPlxxDVjE_1LV41QrlAXwg7mc7fcWgIgEUb1r5q9sORW-Ie4YgYWLNUFY4EsIzYHcWn-ADZ-sCjA')"></div>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="absolute top-sm right-sm bg-surface-container/80 backdrop-blur-md px-3 py-1 rounded-full border border-outline-variant/50 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Destacado</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-md">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-md text-label-md text-primary mb-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span> 15 Oct, 18:00
+                                </p>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight">Smash Bros Local Tournament</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span> The Gaming Hub (2.5km)
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card: Store 2 -->
+<div class="bg-surface rounded-xl p-md border border-outline-variant/30 flex gap-md hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-16 h-16 rounded-lg bg-surface-variant flex-shrink-0 flex items-center justify-center border border-outline-variant overflow-hidden relative">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px] absolute z-10">storefront</span>
+</div>
+<div class="flex flex-col justify-center w-full">
+<div class="flex justify-between items-start">
+<h4 class="font-body-md text-body-md font-bold leading-tight">Retro Bits</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center"><span class="material-symbols-outlined text-[12px] mr-xs">near_me</span>3.8km</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-xs">Tienda de Coleccionables</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-xs text-error">schedule</span> Cerrado ahora
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-background/80 dark:bg-background/80 backdrop-blur-md shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-colors" href="../index.html">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-label-sm text-label-sm">Catalog</span>
+</a>
+<!-- Active Map Tab -->
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-90 duration-150 relative" href="mapa.html">
+<div class="absolute -top-1 w-12 h-1 bg-primary rounded-b-full"></div>
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-label-sm text-label-sm">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-colors" href="perfil.html">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script src="../js/ui/mapa.js" defer></script>
+<script src="../js/pwa-register.js" defer></script>
+</body></html>

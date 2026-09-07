@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7c3aed">
+<link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+<title>GameFinder - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background dark:bg-background text-on-background min-h-screen flex flex-col items-center justify-center font-body-md relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" data-alt="A dark, abstract digital background with subtle geometric grid lines and faint violet neon glows, creating a deep, immersive cyberpunk gaming atmosphere. Soft depth of field, high-end 3D render feel, dark modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBphbLYyaiA1jy4XV2vcij9o3HWAexPdDtNOhxS1e3E1sDGkmX-swsqt3suOj4SfGxdxvkVK4lrOTOy9-TrzT9aUESj0gCkd6lTADJkHFoR-mLhLB9uJiaKh5xabzs7sDFWYyBNC3mWxUvwn3JsA5P04JkDZLRWEiS-bGBtDnty9-LdXvO9Kz7G1phbW1OXmQvCMAjR0xKtZ0DO0kZ6RISMt8kMOtfIsZRRQnPaKXWVkZrNc6s6B5kljA')"></div>
+<!-- Onboarding Container -->
+<main class="w-full max-w-md bg-surface border border-outline-variant/30 rounded-xl shadow-lg relative z-10 flex flex-col h-screen md:h-auto md:max-h-[85vh] overflow-hidden">
+<!-- Header -->
+<header class="flex justify-between items-center w-full px-margin-mobile py-lg">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-[32px]">sports_esports</span>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary">GameFinder</h1>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Stepper -->
+<div class="px-margin-mobile w-full flex items-center justify-between gap-sm mb-lg">
+<div class="h-1 flex-1 rounded-full step-active shadow-[0_0_8px_rgba(124,58,237,0.5)] transition-all duration-300"></div>
+<div class="h-1 flex-1 rounded-full step-inactive transition-all duration-300"></div>
+<div class="h-1 flex-1 rounded-full step-inactive transition-all duration-300"></div>
+</div>
+<!-- Content Area -->
+<section class="flex-1 overflow-y-auto px-margin-mobile pb-xl flex flex-col gap-xl scrollbar-hide">
+<!-- Step 1: Genres -->
+<div class="flex flex-col gap-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Elige tus géneros favoritos</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Selecciona los tipos de juegos que más disfrutas para personalizar tus recomendaciones.</p>
+<div class="flex flex-wrap gap-sm mt-sm">
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors chip-active">Action</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors">RPG</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors chip-active">MOBA</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors">FPS</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors">Strategy</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface text-body-sm font-body-sm font-semibold hover:border-primary transition-colors">Puzzle</button>
+</div>
+</div>
+<!-- Visual Divider -->
+<div class="w-full h-px bg-outline-variant/30"></div>
+<!-- Permissions -->
+<div class="flex flex-col gap-md">
+<h3 class="text-body-lg font-body-lg font-semibold text-on-surface">Permisos necesarios</h3>
+<div class="flex items-center justify-between bg-surface-container-high p-md rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+</div>
+<div>
+<p class="text-body-md font-body-md font-medium text-on-surface">Notificaciones</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Para alertas de nuevos lanzamientos</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high p-md rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">my_location</span>
+</div>
+<div>
+<p class="text-body-md font-body-md font-medium text-on-surface">Ubicación GPS</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Para eventos locales de esports</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Spacer to push button down on larger screens if needed -->
+<div class="flex-1 min-h-[40px]"></div>
+</section>
+<!-- Footer / Action -->
+<footer class="p-margin-mobile bg-surface/90 backdrop-blur-md border-t border-outline-variant/30 sticky bottom-0 w-full z-20">
+<button class="w-full bg-primary-container hover:bg-inverse-primary text-[#F8FAFC] py-3 px-lg rounded-lg text-body-sm font-body-sm font-bold transition-all duration-200 transform hover:-translate-y-1 shadow-[0_4px_14px_0_rgba(124,58,237,0.39)]" onclick="window.location.href='../index.html'">
+                Comenzar
+            </button>
+</footer>
+</main>
+<script src="../js/ui/onboarding.js" defer></script>
+<script src="../js/pwa-register.js" defer></script>
+</body></html>

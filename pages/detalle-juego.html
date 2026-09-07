@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#7c3aed">
+<link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+<title>Game Detail - League of Legends</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-xl selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header Section with Cover Art -->
+<header class="relative w-full h-[50vh] min-h-[400px] md:h-[60vh]">
+<!-- Cover Image -->
+<div class="absolute inset-0 w-full h-full">
+<div class="bg-cover bg-center w-full h-full" data-alt="A highly detailed cinematic wallpaper of a vibrant, action-packed fantasy battle arena game. The scene features glowing neon magic effects, lush dynamic environments, and diverse energetic characters clashing in an epic struggle. The lighting is dramatic, emphasizing high contrast between deep shadows and bright, saturated violet and cyan energetic bursts. The style is modern, hyper-realistic gaming splash art with a premium, polished aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhRbWCo693GrRMSovn8qYLqvnafSDuavehaXrgrbHJn9c9hpPqEoq0LShoHOlq87FBsYlUrqRS8Blg5htuKxogLZJSlDQ3OC3slzvQmgpuNC_itzI_WcYFZmCLuDNCMgyC27fEDItNw6n0ekYTOq9jmHTxpy93zmakzGCjFdOk57Z8YnzyuobKRWZ173BeDgFe1pwMXWlSMd9sIvFKji2f3h2qt5Gajdl-xGjnOL9YCtnLYJp2rP5_qg')"></div>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 gradient-overlay"></div>
+</div>
+<!-- Top Nav (Back Button) -->
+<nav class="absolute top-0 left-0 w-full px-margin-mobile md:px-margin-desktop py-md flex items-center justify-between z-10">
+<button class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-on-surface hover:text-primary transition-colors shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 duration-200" onclick="window.location.href='../index.html'">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<!-- Optional Actions -->
+<button class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-on-surface hover:text-primary transition-colors shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">share</span>
+</button>
+</nav>
+<!-- Title & Basic Info Overlaid on Image -->
+<div class="absolute bottom-0 left-0 w-full px-margin-mobile md:px-margin-desktop pb-lg z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-md">
+<div>
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs rounded-full bg-primary-container/20 border border-primary-container text-primary text-label-sm font-label-sm uppercase tracking-wider backdrop-blur-sm">MOBA</span>
+<span class="flex items-center gap-1 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.8
+                    </span>
+</div>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-xs drop-shadow-lg">League of Legends</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">Riot Games • PC • Released 2009</p>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="px-margin-mobile md:px-margin-desktop mt-lg max-w-[1440px] mx-auto flex flex-col gap-lg md:gap-xl">
+<!-- Left Column: Details & Gallery (Spans 8 cols on desktop) -->
+<div class="flex flex-col gap-xl">
+<!-- Action Buttons -->
+<div class="flex flex-col gap-sm">
+<button class="w-full bg-primary-container text-on-primary-container hover:bg-primary-container/90 py-md rounded-lg font-body-md text-body-md font-bold shadow-[0px_10px_15px_-3px_rgba(124,58,237,0.3)] transition-all active:scale-[0.98] duration-200 flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                    Ver en tienda
+                </button>
+<button class="w-full bg-surface border border-outline-variant text-on-surface hover:bg-surface-variant py-md rounded-lg font-body-md text-body-md font-bold transition-all active:scale-[0.98] duration-200 flex items-center justify-center gap-sm shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+                    Guardar
+                </button>
+</div>
+<!-- Description -->
+<section>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-sm">Acerca del juego</h2>
+<div class="text-body-lg font-body-lg text-on-surface-variant space-y-4 leading-relaxed">
+<p>
+                        Sumérgete en el campo de batalla definitivo. Forma equipo con tus amigos y compite contra oponentes en un combate estratégico de ritmo rápido. Con un plantel de más de 150 campeones únicos, cada uno con sus propias habilidades y estilos de juego, no hay dos partidas iguales.
+                    </p>
+<p>
+                        Destruye la base enemiga (el Nexo) mientras defiendes la tuya. Domina tu carril, controla los objetivos neutrales y coordina ataques masivos en equipo para asegurar la victoria. La estrategia, la habilidad mecánica y el trabajo en equipo son la clave.
+                    </p>
+</div>
+</section>
+<!-- Screenshot Gallery -->
+<section>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+                    Galería
+                </h2>
+<!-- Horizontal scrollable container -->
+<div class="flex overflow-x-auto hide-scrollbar gap-md pb-sm snap-x snap-mandatory">
+<div class="snap-center shrink-0 w-[85%] md:w-[60%] lg:w-[45%] aspect-video rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="In-game screenshot of a competitive multiplayer online battle arena. The camera angle is isometric top-down, showing highly detailed stylized characters casting vibrant glowing spells in a lush forest environment. The UI elements are sleek and modern, framing the intense, fast-paced action illuminated by bright magical effects against the dark, moody terrain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdrbFCp9_wiA73w9RpedWcggYbH8QKVHf8P4uZFDvn7NoMQKyjtoobpT5cIIOvvQYA3Z1vUXFCr13Kmfy6mG_StngD7GL3EXPdWpOh413-X-sp7HwLQKJpFvn85oCbPoobkpLCd8BBw_lgoafzKpGp_Oh3V5s3ZyL2HQvkC4M_lv5tLFkcLw7KGbqoaBMUCrcue7hE-lBjrBp_gtCbiJ4bp_nIbw-9kYuMC1GJ7ET83Tm_I_FqXOqi9A"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+</div>
+<div class="snap-center shrink-0 w-[85%] md:w-[60%] lg:w-[45%] aspect-video rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic close-up screenshot of a fantasy character from a video game winding up for a massive attack. The character is highly detailed with intricate armor and glowing purple particle effects surrounding their weapon. The background is slightly blurred (depth of field) showcasing a grand, imposing ancient ruin lit by dramatic twilight, emphasizing high-fidelity graphics and intense combat mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYqZF_u6_w4DMZs609Afpw2tYTZvFckB0vjeevm22XvNGn4o3ZM1lDs9t9gYYg1eXoQq58BazfwXCC8t2K8ZLRgvkMM80wutQq-hgHs0JioSLTuhVCCKUoCf8k2llfe7gurRiueN9JjjW6mr9EvB6RVMzF5ULid2YSZkyIvY_N5GKCckWbxU5hnh3mAFK1jMXMKSVfDHnS2PxFCIHx21e0zUf7qKVp1QNGoqrwJu0fTYRM0ZvzJ1qdJw"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+</div>
+<div class="snap-center shrink-0 w-[85%] md:w-[60%] lg:w-[45%] aspect-video rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An expansive panoramic view of a fantasy game environment map. The scene features a central glowing nexus crystal surrounded by intricate stone pathways, glowing flora, and looming statues. The lighting is moody and atmospheric, with deep blues and vivid cyan highlights creating a sense of epic scale and mystery in a high-end competitive gaming setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwhTF_SthBVTNQeU5t3Vbq4500XqYVIqy1kIZnO4hH260SxIkf0rjkELItBXJdmgA4tM6zhYwdIMpW4uFjFoNOufHuydl4RD8_GK9FC4wfNzYgM0HqXpUUXw4gTgxdYQYFiTrFx_WZTTiaWFoo14okRyPARuqzi-D0zOBUwRh_wWxXp7SdFscwmGQ-eRTEhyuCJQFlq204mLFATNSnr8nqf9LhdDeTnxyaIhxEPkDgLdJwgW6PacgC1g"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Meta Info Section -->
+<section class="flex flex-col gap-lg">
+<!-- Map Link / Find Stores -->
+<a class="block bg-surface-container-high rounded-xl p-md border border-outline-variant/30 hover:border-primary/50 transition-colors group shadow-md hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.5)]" href="mapa.html">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface group-hover:text-primary transition-colors">Tiendas y eventos cerca</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Encuentra dónde jugar o comprar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</a>
+<!-- Game Details Bento Box -->
+<div class="bg-surface-container rounded-xl border border-outline-variant/20 p-md flex flex-col gap-md shadow-md">
+<h3 class="text-label-md font-label-md text-primary font-bold uppercase tracking-wider mb-sm">Detalles del título</h3>
+<div class="grid grid-cols-2 gap-y-md">
+<div>
+<p class="text-label-sm font-label-sm text-outline mb-xs">Desarrollador</p>
+<p class="text-body-sm font-body-sm text-on-surface">Riot Games</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline mb-xs">Distribuidor</p>
+<p class="text-body-sm font-body-sm text-on-surface">Riot Games</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline mb-xs">Fecha de lanzamiento</p>
+<p class="text-body-sm font-body-sm text-on-surface">27 Oct, 2009</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline mb-xs">Clasificación</p>
+<p class="text-body-sm font-body-sm text-on-surface">TEEN (T)</p>
+</div>
+</div>
+<div class="mt-sm pt-md border-t border-outline-variant/20">
+<p class="text-label-sm font-label-sm text-outline mb-xs">Plataformas</p>
+<div class="flex flex-wrap gap-xs">
+<span class="px-sm py-xs bg-surface text-on-surface rounded-md text-label-sm font-label-sm border border-outline-variant/50">PC</span>
+<span class="px-sm py-xs bg-surface text-on-surface rounded-md text-label-sm font-label-sm border border-outline-variant/50">Mac</span>
+</div>
+</div>
+<div class="mt-xs">
+<p class="text-label-sm font-label-sm text-outline mb-xs">Géneros</p>
+<div class="flex flex-wrap gap-xs">
+<span class="px-sm py-xs bg-surface text-on-surface rounded-md text-label-sm font-label-sm border border-outline-variant/50">MOBA</span>
+<span class="px-sm py-xs bg-surface text-on-surface rounded-md text-label-sm font-label-sm border border-outline-variant/50">Estrategia</span>
+<span class="px-sm py-xs bg-surface text-on-surface rounded-md text-label-sm font-label-sm border border-outline-variant/50">Multijugador</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-2xl py-xl px-margin-mobile bg-surface-container-lowest flex flex-col items-center gap-md">
+<div class="text-label-md font-label-md text-on-surface font-bold uppercase tracking-widest flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+            GameFinder
+        </div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">© 2026 GameFinder · Desarrollado por Stiven Robles Galán</p>
+<div class="flex gap-md">
+<a class="text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+<script src="../js/pwa-register.js" defer></script>
+</body></html>
